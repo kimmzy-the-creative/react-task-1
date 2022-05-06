@@ -1,25 +1,6 @@
-import React, { useEffect, useState, Fragment } from "react";
-
-const PriceFormat = () => {
-  const [products, setProducts] = useState([])
-
-  const fetchData = () => {
-    fetch("http://localhost:8000/products")
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setProducts(data)
-      })
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-  return (
-                <h4>{product.price}</h4>
-  )
+const PriceFormat(props){
+    return (props.product.price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
-export default PriceFormat
+
+export default PriceFormat;
