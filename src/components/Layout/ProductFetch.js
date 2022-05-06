@@ -22,11 +22,17 @@ const ProductFetch = () => {
   return (
     <Fragment>
         <h2>Featured Products</h2>
+        <select>
+          <option value="size">Size</option>
+          <option value="date">Date</option>
+          <option value="price">Price</option>
+        </select>
         <Card >
           {products.map((product) => (
             <div className='product-grid' >
               <div className='grid-item' key={product.id}>
                 <p className="face-font">{product.face}</p>
+                <p >{`Size: ${product.size}`}</p>
                 <p className="date-font">{`Date: ${product.date}`}</p>
                 <h4 className="price-font">{`Price: ${product.price}`}</h4>
                 <button className={classes.button}>Add to Cart</button>
