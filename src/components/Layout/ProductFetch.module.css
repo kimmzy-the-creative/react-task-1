@@ -1,0 +1,56 @@
+body{
+  padding-top: 18vh;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+
+h1 {
+  text-align: center;
+
+}
+h2{
+  color: #383838;
+  text-align: center;
+}
+
+.product-grid{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-left: 10px;
+}
+
+.grid-item{
+
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.date-font{
+  color: grey;
+}
+
+button{
+  /*background-color: #5bccf6; (also a nice colour)*/
+  width: 140px;
+  font: inherit;
+  border: 1px solid #4f005f;
+  background: #4f005f;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button:hover,
+.button:active {
+  background: #741188;
+  border-color: #741188;
+}
+
+.button:focus {
+  outline: none;
+
+}
