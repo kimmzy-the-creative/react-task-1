@@ -25,10 +25,10 @@ const ProductFetch = () => {
         <Card >
           {products.map((product) => (
             <div className='product-grid' >
-              <div className='grid-item'>
+              <div className='grid-item' key={product.id}>
                 <p className="face-font">{product.face}</p>
-                <p className="date-font">{product.date}</p>
-                <h4 className="price-font">{product.price}</h4>
+                <p className="date-font">{`Date: ${product.date}`}</p>
+                <h4 className="price-font">{`Price: ${product.price}`}</h4>
                 <button className={classes.button}>Add to Cart</button>
               </div>
             </div>
