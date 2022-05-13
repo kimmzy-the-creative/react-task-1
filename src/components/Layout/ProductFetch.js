@@ -1,9 +1,11 @@
 import React, { useEffect, useState, Fragment } from "react";
 import classes from './ProductFetch.module.css';
 import Card from '../UI/Card';
+import SortByDropdown from '../Functionality/SortByDropdown'
 
 const ProductFetch = () => {
   const [products, setProducts] = useState([]);
+  const [sortType, setSortType] = useState();
 
   const fetchData = () => {
     fetch("http://localhost:8000/products")
@@ -19,14 +21,12 @@ const ProductFetch = () => {
     fetchData()
   }, [])
 
+  console.log(sortType)
+
   return (
     <Fragment>
         <h2>Featured Products</h2>
-        <select>
-          <option value="size">Size</option>
-          <option value="date">Date</option>
-          <option value="price">Price</option>
-        </select>
+        <SortByDropdown sortType={sortType} setSortType={setSortType}/>
         <Card >
           {products.map((product) => (
             <div className='product-grid' >

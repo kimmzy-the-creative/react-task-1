@@ -15,7 +15,11 @@ h2{
   text-align: center;
 }
 
-.product-grid{
+.wrapper {
+  display: grid;
+}
+
+.productGrid:first-of-type {
   grid-column-start: 1;
   grid-column-end: 4;
   padding-left: 10px;
